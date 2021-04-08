@@ -42,7 +42,7 @@ Configure your env vars:
 
   process.env.SLACK_ENABLED = 0  // default: 1 (enabled)
   process.env.SLACK_LEVEL = "warn"  // default: "error"
-  process.env.SLACK_URL = <your_slack_channel_url_string>  
+  process.env.SLACK_URL = <your_slack_channel_url_string>
 ```
 
 ## Logging
