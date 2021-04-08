@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Devplace logger lib",
   "main": "lib/src/index.js",
+  "license": "MIT",
   "types": "lib/src/index.d.ts",
   "scripts": {
     "lint": "gts lint",
@@ -14,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/devplacebr/logger"
+    "url": "https://github.com/devplacebr/logger.git"
   },
   "keywords": [
     "Devplace Solutions",
@@ -28,7 +29,6 @@
     "name": "Lucas Vieira",
     "email": "lucas@devplace.com.br"
   },
-  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/devplacebr/logger/issues"
   },
