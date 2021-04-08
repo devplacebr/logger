@@ -1,0 +1,49 @@
+{
+  "name": "@devplace/logger",
+  "version": "0.1.0",
+  "description": "Devplace logger lib",
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
+  "scripts": {
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "precompile": "yarn clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devplacebr/logger"
+  },
+  "keywords": [
+    "Devplace Solutions",
+    "Logger tool",
+    "Error handler",
+    "Slack notifications",
+    "Winston logger",
+    "Storage logger"
+  ],
+  "author": {
+    "name": "Lucas Vieira",
+    "email": "lucas@devplace.com.br"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/devplacebr/logger/issues"
+  },
+  "homepage": "https://github.com/devplacebr/logger",
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "gts": "^3.1.0",
+    "typescript": "^4.2.4"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.2",
+    "winston-slack-webhook-transport": "^2.0.1"
+  }
+}
