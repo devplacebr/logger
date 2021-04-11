@@ -19,7 +19,6 @@ const transportsToApply = [];
 transportsToApply.push(
   new transports.Console({
     level: 'info',
-    format: format.simple(),
   })
 );
 
@@ -59,18 +58,10 @@ if (+SLACK_ENABLED > 0 && SLACK_URL !== '') {
 }
 
 export const logger = createLogger({
-  format:
-    NODE_ENV === 'development'
-      ? format.combine(
-          format.errors({stack: false}),
-          format.json(),
-          format.timestamp(),
-          format.colorize()
-        )
-      : format.combine(
-          format.errors({stack: true}),
-          format.json(),
-          format.timestamp()
-        ),
+  format: format.combine(
+    format.timestamp(),
+    format.errors({stack: true}),
+    format.json()
+  ),
   transports: transportsToApply,
 });
