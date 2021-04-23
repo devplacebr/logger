@@ -2,7 +2,6 @@
 
 Devplace Logger Helper
 
-- Console log colorized
 - Slack notifications (optional)
 - Daily rotate log file (optional)
 
@@ -22,7 +21,7 @@ logger.info({foo: 'bar', type: 'some json object'})
 // Error handling
 
 try {
-  throw new Error('throw new Braba');
+  throw new Error('throw new braba');
 } catch (error) {
     logger.error(error) // If slack configured, wil send a slack notification
 }
