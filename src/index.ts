@@ -22,6 +22,12 @@ transportsToApply.push(
   })
 );
 
+const timezoned = () => {
+  return new Date().toLocaleString('pt-BR', {
+    timeZone: 'America/Sao_Paulo',
+  });
+};
+
 /**
  * Rotate file logs (dont use inside containers). Used for stand-alone instances (EC2, VMs, etc.)
  * DOCS:  https://www.npmjs.com/package/winston-daily-rotate-file
@@ -48,7 +54,7 @@ if (+SLACK_ENABLED > 0 && SLACK_URL !== '') {
       webhookUrl: SLACK_URL,
       level: SLACK_LEVEL,
       formatter: info => {
-        const {message, stack = null, timestamp = new Date()} = info;
+        const {message, stack = null, timestamp = timezoned()} = info;
         return {
           text: `[${APP_NAME}][${NODE_ENV}][${timestamp}]: ${stack ?? message}`,
         };
@@ -59,7 +65,7 @@ if (+SLACK_ENABLED > 0 && SLACK_URL !== '') {
 
 export const logger = createLogger({
   format: format.combine(
-    format.timestamp(),
+    format.timestamp({format: timezoned}),
     format.errors({stack: true}),
     format.json()
   ),
