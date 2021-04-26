@@ -1,6 +1,6 @@
 {
   "name": "@devplace/logger",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Devplace logger lib",
   "main": "lib/src/index.js",
   "license": "MIT",
